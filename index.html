@@ -57,6 +57,7 @@
         </div>
     </header>
     <main>
+        <p id="selectedId" class="hidden"></p>
         <!--^ But Ticket section -->
         <section class="w-[1171px] mx-auto mt-6">
             <img class="left-0 right-0 mx-auto top-28 absolute z-[-1]" src="images/banner.png" alt="">
@@ -440,6 +441,20 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <dialog id="my_modal_1" class="modal">
+                                <div class="modal-box">
+                                    <h3 class="font-bold text-lg">Sorry!!</h3>
+                                    <p class="py-4 inter font-medium">You cant buy more than 4 tickets.</p>
+                                    <div class="modal-action">
+                                        <form method="dialog">
+                                            <!-- if there is a button in form, it will close the    modal -->
+                                            <button class="btn">Close</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </dialog>
+
                         </div>
                     </div>
                     <div>
@@ -492,7 +507,7 @@
                         <div class="mb-5">
                             <div class="h-[56px] bg-white rounded-xl flex items-center">
                                 <input type="text" class="py-3 ml-1 pr-[108px] pl-2 outline-none focus:outline-none rounded-xl" placeholder="Have any copupon?" disabled>
-                                <button class="btn bg-[#1DD100] text-white disabled:bg-slate-300 disabled:text-white" disabled>Apply</button>
+                                <button id="apply-btn" class="btn bg-[#1DD100] text-white disabled:bg-slate-300 disabled:text-white" disabled>Apply</button>
                             </div>
                         </div>
                         <div class="flex justify-between mb-4">

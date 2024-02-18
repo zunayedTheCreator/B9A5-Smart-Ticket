@@ -11,3 +11,13 @@ function removeClassById(elementId, value) {
     const element = document.getElementById(elementId);
     element.classList.toggle(value);
 }
+
+function addClasssById(elementId, value) {
+    const element = document.getElementById(elementId);
+    element.classList.toggle(value);
+}
+
+function removeClasssById(elementId, value) {
+    const element = document.getElementById(elementId);
+    element.classList.toggle(value);
+}
