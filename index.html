@@ -7,12 +7,19 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
         .raleway{
         font-family: "Raleway", sans-serif;
         font-optical-sizing: auto;
         font-style: normal;
+        }
+        .inter {
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        font-variation-settings:
+        "slnt" 0;
         }
     </style>
 </head>
@@ -31,7 +38,7 @@
                     <li><a class="font-semibold">Search</a></li>
                 </ul>
               </div>
-              <a class="text-4xl font-extrabold">Easy Ticket</a>
+              <a class="text-4xl font-extrabold cursor-pointer">Easy Ticket</a>
             </div>
             <div class="navbar-center hidden lg:flex">
               <ul class="menu menu-horizontal px-1">
@@ -47,12 +54,477 @@
                 <img src="images/bus-icon.png" alt="">
               </a>
             </div>
-          </div>
+        </div>
     </header>
     <main>
+        <!--^ But Ticket section -->
+        <section class="w-[1171px] mx-auto mt-6">
+            <img class="left-0 right-0 mx-auto top-28 absolute z-[-1]" src="images/banner.png" alt="">
+            <h1 class="text-center font-extrabold text-6xl text-white mt-28">
+                Start-to-End Travel with
+            </h1>
+            <h1 class="text-[#1DD100] text-center font-extrabold text-6xl mt-6">Easy Paribahan</h1>
+            <p class="text-center w-[890px] mx-auto text-white mt-9">Hop aboard with Easy Ticket! Effortlessly book your bus trips online. From city commutes to scenic routes, we've got you covered. Simple booking, reliable service, endless destinations. Easy Ticket – your journey starts here!</p>
+            <div class="text-center">
+                <button class="btn font-bold text-lg bg-[#1DD100] border-none px-6 mt-12">Buy Ticket</button>
+            </div>
+        </section>
+        <!-- ^ -->
 
+        <!--^ Coupon section -->
+        <section class="w-[1180px] mx-auto mt-80">
+            <h1 class="font-bold text-4xl text-center mb-12">Best offers for you</h1>
+            <div class="flex justify-between mb-12">
+                <div class="w-[570px] flex bg-[#FFBF0F] rounded-3xl">
+                    <div class="w-[300px] pt-14 pl-12">
+                        <h2 class="text-[#030712CC] font-black inter text-4xl mb-2">15% OFF</h2>
+                        <h5 class="text-[#030712CC] font-semibold inter text-xl mb-2">on your next purchase</h5>
+                        <p class="text-[#03071280] font-medium inter text-base">use by January 2024</p>
+                    </div>
+                    <div>
+                        <img src="images/cupon-devider.png" alt="">
+                    </div>
+                    <div class="w-[189px] pt-[72px] pl-2 text-center">
+                        <h3 class="text-[28px] font-bold mb-2">NEW15</h3>
+                        <p class="text-base text-[#03071280] font-medium">Coupon Code</p>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="w-[570px] flex bg-[#F78C9C] rounded-3xl">
+                    <div class="w-[300px] pt-14 pl-12">
+                        <h2 class="text-[#030712CC] font-black inter text-4xl mb-2">20% OFF</h2>
+                        <h5 class="text-[#030712CC] font-semibold inter text-xl mb-2">on your next purchase</h5>
+                        <p class="text-[#03071280] font-medium inter text-base">use by January 2024</p>
+                    </div>
+                    <div>
+                        <img src="images/cupon-devider.png" alt="">
+                    </div>
+                    <div class="w-[189px] pt-[72px] pl-2 text-center">
+                        <h3 class="text-[28px] font-bold mb-2">Couple 20</h3>
+                        <p class="text-base text-[#03071280] font-medium">Coupon Code</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mb-28">
+                <button class="btn bg-white border-[#1DD100] text-[#1DD100] px-6">See All Offers</button>
+            </div>
+        </section>
+        <!-- ^ -->
+        <!--^ Detail Section -->
+        <section class="h-[1950px] w-full bg-[#F7F8F8] rounded-t-[80px] border-t-4 border-[#1DD100]">
+            <h1 class="font-bold text-4xl text-center mb-6 mt-32">Easy Paribahan</h1>
+            <p class="text-center w-[890px] mx-auto text-[#03071299] inter mt-9">Book your seat now! Start your journey in peace. Start-To-End East Ticket is always with you. Simple booking, reliable service, endless destinations. Easy Ticket – your journey starts here!</p>
+            <!--  -->
+            <div class="w-[1180px] mx-auto rounded-3xl bg-white flex items-center mt-12">
+                <div class="w-[808px]">
+                    <div class="flex justify-between items-center mb-4 mt-6 ml-6">
+                        <div class="flex items-center">
+                            <div>
+                                <img class="mr-3" src="images/bus-logo.png" alt="">
+                            </div>
+
+                            <div>
+                                <h2 class="text-[#030712CC] font-bold text-4xl mb-2">Greenline Paribahan</h2>
+                                <p class="text-[#03071280] font-medium inter text-base">Coach-009-WEB ! AC_Business</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <button class="btn text-lg text-[#1DD100] bg-[#1DD1001A] px-5">
+                                <img src="images/seat-green.png" alt="">
+                                40 Seats left
+                            </button>
+                        </div>
+                    </div>
+                    <!-- * -->
+                    <div class="bg-[#F7F8F8] p-6 rounded-3xl ml-6 mb-6">
+                        <div class="flex justify-between mb-3">
+                            <p class="text-[#03071280] font-semibold text-base">Route</p>
+                            <p class="text-[#030712] font-semibold text-base">Dhaka - Sylhet</p>
+                        </div>
+                        <div class="border-dashed border mb-3"></div>
+                        <div class="flex justify-between mb-3">
+                            <p class="text-[#03071280] font-semibold text-base">Departure Time</p>
+                            <p class="text-[#030712] font-semibold text-base">9:00 PM</p>
+                        </div>
+                        <div class="border-dashed border mb-5"></div>
+                        <div class="flex justify-between">
+                            <button class="btn btn-active w-[232px] bg-[#0307120D] border-none">Boarding Point - Laxmipur</button>
+                            <button class="btn btn-active w-[232px] bg-[#0307120D] border-none">Dropping Point - Bogura</button>
+                            <button class="btn btn-active w-[232px] bg-[#0307120D] border-none">Est. Time - 11 Hour</button>
+                        </div>
+                    </div>
+                </div>
+                <!--~ ------------------------------------- -->
+                <div>
+                    <img src="images/info-devider.png" alt="" class="h-[418px]">
+                </div>
+                <!--~ ------------------------------------- -->
+                <div class="text-center ml-12">
+                    <img src="images/fare.png" alt="" class="mx-auto mb-6">
+                    <h2 class="text-[#030712] font-bold text-4xl mb-2">550 Taka</h2>
+                    <h3 class="text-[#03071299] text-2xl font-semibold">Per Seat</h3>
+                </div>
+            </div>
+            <!--  -->
+            <div class="w-[1180px] mx-auto rounded-3xl bg-white flex items-center mt-12 px-8 py-6 justify-between">
+                <div class="w-[609px]">
+                    <div>
+                        <h3 class="text-[#030712] text-2xl font-bold mb-5">Select Your Seat</h3>
+                        <div class="border-dashed border mb-5"></div>
+                        <div class="flex items-center justify-between mb-4">
+                            <p class="text-[#03071280] flex font-medium inter text-lg">
+                                <img class="mr-2" src="images/seat-gray.png" alt="">
+                                Available
+                            </p>
+                            <p class="text-[#1DD100] flex font-medium inter text-lg">
+                                <img class="mr-2" src="images/seat-green-filled.png" alt="">
+                                Selected
+                            </p>
+                        </div>
+                        <div class="border-dashed border mb-5"></div>
+
+                        <div>
+                            <div class="flex justify-end mb-6">
+                                <div class="h-[56px] w-[110px] bg-[#0307121A] flex items-center justify-center rounded-xl">
+                                    <img src="images/steering-wheel.png" class="w-[26px]" alt="">
+                                </div>
+                            </div>
+                            <!-- !------------ -->
+                            <div class="flex justify-between items-center mb-6">
+                                <div>
+                                    <p class="text-[#03071280] flex font-medium inter text-lg">A</p>
+                                </div>
+                                <div class="w-[570px] flex justify-between">
+                                    <div class="w-[252px] flex justify-between">
+                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                            <p class="text-[#03071280] flex font-medium inter text-lg">A1</p>
+                                        </div>
+                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                            <p class="text-[#03071280] flex font-medium inter text-lg">A2</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="w-[252px] flex justify-between">
+                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                            <p class="text-[#03071280] flex font-medium inter text-lg">A3</p>
+                                        </div>
+                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                            <p class="text-[#03071280] flex font-medium inter text-lg">A4</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ^------------ -->
+                            <div class="flex justify-between items-center mb-6">
+                                <div>
+                                    <p class="text-[#03071280] flex font-medium inter text-lg">B</p>
+                                </div>
+                                <div class="w-[570px] flex justify-between">
+                                    <div class="w-[252px] flex justify-between">
+                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                            <p class="text-[#03071280] flex font-medium inter text-lg">B1</p>
+                                        </div>
+                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                            <p class="text-[#03071280] flex font-medium inter text-lg">B2</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="w-[252px] flex justify-between">
+                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                            <p class="text-[#03071280] flex font-medium inter text-lg">B3</p>
+                                        </div>
+                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                            <p class="text-[#03071280] flex font-medium inter text-lg">B4</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ^------------ -->
+                            <div class="flex justify-between items-center mb-6">
+                                <div>
+                                    <p class="text-[#03071280] flex font-medium inter text-lg">C</p>
+                                </div>
+                                <div class="w-[570px] flex justify-between">
+                                    <div class="w-[252px] flex justify-between">
+                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                            <p class="text-[#03071280] flex font-medium inter text-lg">C1</p>
+                                        </div>
+                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                            <p class="text-[#03071280] flex font-medium inter text-lg">C2</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="w-[252px] flex justify-between">
+                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                            <p class="text-[#03071280] flex font-medium inter text-lg">C3</p>
+                                        </div>
+                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                            <p class="text-[#03071280] flex font-medium inter text-lg">C4</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ^------------ -->
+                            <div class="flex justify-between items-center mb-6">
+                                <div>
+                                    <p class="text-[#03071280] flex font-medium inter text-lg">D</p>
+                                </div>
+                                <div class="w-[570px] flex justify-between">
+                                    <div class="w-[252px] flex justify-between">
+                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                            <p class="text-[#03071280] flex font-medium inter text-lg">D1</p>
+                                        </div>
+                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                            <p class="text-[#03071280] flex font-medium inter text-lg">D2</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="w-[252px] flex justify-between">
+                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                            <p class="text-[#03071280] flex font-medium inter text-lg">D3</p>
+                                        </div>
+                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                            <p class="text-[#03071280] flex font-medium inter text-lg">D4</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ^------------ -->
+                            <div class="flex justify-between items-center mb-6">
+                                <div>
+                                    <p class="text-[#03071280] flex font-medium inter text-lg">E</p>
+                                </div>
+                                <div class="w-[570px] flex justify-between">
+                                    <div class="w-[252px] flex justify-between">
+                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                            <p class="text-[#03071280] flex font-medium inter text-lg">E1</p>
+                                        </div>
+                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                            <p class="text-[#03071280] flex font-medium inter text-lg">E2</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="w-[252px] flex justify-between">
+                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                            <p class="text-[#03071280] flex font-medium inter text-lg">E3</p>
+                                        </div>
+                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                            <p class="text-[#03071280] flex font-medium inter text-lg">E4</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ^------------ -->
+                            <div class="flex justify-between items-center mb-6">
+                                <div>
+                                    <p class="text-[#03071280] flex font-medium inter text-lg">F</p>
+                                </div>
+                                <div class="w-[570px] flex justify-between">
+                                    <div class="w-[252px] flex justify-between">
+                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                            <p class="text-[#03071280] flex font-medium inter text-lg">F1</p>
+                                        </div>
+                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                            <p class="text-[#03071280] flex font-medium inter text-lg">F2</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="w-[252px] flex justify-between">
+                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                            <p class="text-[#03071280] flex font-medium inter text-lg">F3</p>
+                                        </div>
+                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                            <p class="text-[#03071280] flex font-medium inter text-lg">F4</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ^------------ -->
+                            <div class="flex justify-between items-center mb-6">
+                                <div>
+                                    <p class="text-[#03071280] flex font-medium inter text-lg">G</p>
+                                </div>
+                                <div class="w-[570px] flex justify-between">
+                                    <div class="w-[252px] flex justify-between">
+                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                            <p class="text-[#03071280] flex font-medium inter text-lg">G1</p>
+                                        </div>
+                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                            <p class="text-[#03071280] flex font-medium inter text-lg">G2</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="w-[252px] flex justify-between">
+                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                            <p class="text-[#03071280] flex font-medium inter text-lg">G3</p>
+                                        </div>
+                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                            <p class="text-[#03071280] flex font-medium inter text-lg">G4</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ^------------ -->
+                            <div class="flex justify-between items-center mb-6">
+                                <div>
+                                    <p class="text-[#03071280] flex font-medium inter text-lg">H</p>
+                                </div>
+                                <div class="w-[570px] flex justify-between">
+                                    <div class="w-[252px] flex justify-between">
+                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                            <p class="text-[#03071280] flex font-medium inter text-lg">H1</p>
+                                        </div>
+                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                            <p class="text-[#03071280] flex font-medium inter text-lg">H2</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="w-[252px] flex justify-between">
+                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                            <p class="text-[#03071280] flex font-medium inter text-lg">H3</p>
+                                        </div>
+                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                            <p class="text-[#03071280] flex font-medium inter text-lg">H4</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ^------------ -->
+                            <div class="flex justify-between items-center mb-6">
+                                <div>
+                                    <p class="text-[#03071280] flex font-medium inter text-lg">I</p>
+                                </div>
+                                <div class="w-[570px] flex justify-between">
+                                    <div class="w-[252px] flex justify-between">
+                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                            <p class="text-[#03071280] flex font-medium inter text-lg">I1</p>
+                                        </div>
+                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                            <p class="text-[#03071280] flex font-medium inter text-lg">I2</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="w-[252px] flex justify-between">
+                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                            <p class="text-[#03071280] flex font-medium inter text-lg">I3</p>
+                                        </div>
+                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                            <p class="text-[#03071280] flex font-medium inter text-lg">I4</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ^------------ -->
+                            <div class="flex justify-between items-center mb-6">
+                                <div>
+                                    <p class="text-[#03071280] flex font-medium inter text-lg">J</p>
+                                </div>
+                                <div class="w-[570px] flex justify-between">
+                                    <div class="w-[252px] flex justify-between">
+                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                            <p class="text-[#03071280] flex font-medium inter text-lg">J1</p>
+                                        </div>
+                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                            <p class="text-[#03071280] flex font-medium inter text-lg">J2</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="w-[252px] flex justify-between">
+                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                            <p class="text-[#03071280] flex font-medium inter text-lg">J3</p>
+                                        </div>
+                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                            <p class="text-[#03071280] flex font-medium inter text-lg">J4</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+
+                    </div>
+                </div>
+                <!--~ ---------------------- -->
+                <div class="border-dashed border h-[992px]"></div>
+                <!--~ ---------------------- -->
+                <div class="w-[433px]">
+                    <h3 class="text-[#030712] text-2xl font-bold mb-5">Select Your Seat</h3>
+                    <div class="border-dashed border mb-5"></div>
+
+                    <div class="bg-[#f7f7f7] rounded-xl py-6 px-7 mb-4">
+                        <div class="flex mb-3">
+                            <h5 class="inter font-medium text-[#030712] mr-20 flex items-center">Seat
+                                <span class="badge ml-1 w-7 h-[14px] text-xs flex mb-[2px] pt-[2px] bg-[#1DD100] text-white">0</span>
+                            </h5>
+                            <h5 class="inter font-medium text-[#030712] mr-[150px]">Class</h5>
+                            <h5 class="inter font-medium text-[#030712]">Price</h5>
+                        </div>
+                        <div class="border-dashed border mb-3"></div>
+                        <div>
+                            <div class="flex mb-3">
+                                <h5 class="inter text-[#03071299] mr-[130px] flex items-center">A1</h5>
+                                <h5 class="inter text-[#03071299] mr-[120px]">Economoy</h5>
+                                <h5 class="inter text-[#03071299]">550</h5>
+                            </div>
+                            <div class="flex mb-3">
+                                <h5 class="inter text-[#03071299] mr-[130px] flex items-center">B1</h5>
+                                <h5 class="inter text-[#03071299] mr-[120px]">Economoy</h5>
+                                <h5 class="inter text-[#03071299]">550</h5>
+                            </div>
+                            <div class="flex mb-3">
+                                <h5 class="inter text-[#03071299] mr-[130px] flex items-center">B1</h5>
+                                <h5 class="inter text-[#03071299] mr-[120px]">Economoy</h5>
+                                <h5 class="inter text-[#03071299]">550</h5>
+                            </div>
+                            <div class="flex mb-3">
+                                <h5 class="inter text-[#03071299] mr-[130px] flex items-center">D1</h5>
+                                <h5 class="inter text-[#03071299] mr-[120px]">Economoy</h5>
+                                <h5 class="inter text-[#03071299]">550</h5>
+                            </div>
+                        </div>
+                        <div class="border-dashed border mb-3"></div>
+                        <div class="flex justify-between mb-4">
+                            <h4 class="inter font-bold text-[#030712]">Total Price</h4>
+                            <h4 class="inter font-bold text-[#030712]">BDT 1100</h4>
+                        </div>
+                        <div class="mb-5">
+                            <div class="h-[56px] bg-white rounded-xl flex items-center">
+                                <input type="text" class="py-3 ml-1 pr-[108px] pl-2 outline-none focus:outline-none rounded-xl" placeholder="Have any copupon?" disabled>
+                                <button class="btn bg-[#1DD100] text-white disabled:bg-slate-300 disabled:text-white" disabled>Apply</button>
+                            </div>
+                        </div>
+                        <div class="flex justify-between mb-4">
+                            <h4 class="inter font-bold text-[#030712]">Grand Total</h4>
+                            <h4 class="inter font-bold text-[#030712]">BDT 1100</h4>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <form action="#">
+                            <h4 class="inter font-bold text-[#030712] mb-3">Passenger Name*</h4>
+                            <input type="text" placeholder="Enter your name" class="input input-bordered w-full mb-5" required/>
+
+                            <h4 class="inter font-bold text-[#030712] mb-3">Phone Number*</h4>
+                            <input type="number" placeholder="Enter your phone number" class="input input-bordered w-full mb-5" required/>
+
+                            <h4 class="inter font-bold text-[#030712] mb-3">Email ID</h4>
+                            <input type="email" name="email" placeholder="Enter your email Id" class="input input-bordered w-full mb-6"/>
+
+                            <input type="button" name="button" value="Next" class="btn py-2 w-full rounded-2xl bg-[#1DD100] text-white font-bold">
+                        </form>
+                    </div>
+                    <div class="flex justify-around">
+                        <p class="font-medium text-[#03071299] underline">Terms and Conditions</p>
+                        <p class="font-medium text-[#03071299] underline">Cancellation Policy</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ^ -->
     </main>
-    <footer>
+    <footer class="h-[457px] bg-[#030712]">
 
     </footer>
 </body>
