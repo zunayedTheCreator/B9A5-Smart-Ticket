@@ -66,7 +66,7 @@
             <h1 class="text-[#1DD100] text-center font-extrabold text-6xl mt-6">Easy Paribahan</h1>
             <p class="text-center w-[890px] mx-auto text-white mt-9">Hop aboard with Easy Ticket! Effortlessly book your bus trips online. From city commutes to scenic routes, we've got you covered. Simple booking, reliable service, endless destinations. Easy Ticket – your journey starts here!</p>
             <div class="text-center">
-                <button class="btn font-bold text-lg bg-[#1DD100] border-none px-6 mt-12">Buy Ticket</button>
+                <button onclick="scrollToSection('detail-section')" class="btn font-bold text-lg bg-[#1DD100] border-none px-6 mt-12">Buy Ticket</button>
             </div>
         </section>
         <!-- ^ -->
@@ -132,7 +132,7 @@
                         <div>
                             <button class="btn text-lg text-[#1DD100] bg-[#1DD1001A] px-5">
                                 <img src="images/seat-green.png" alt="">
-                                40 Seats left
+                                <span id="current-seat">40</span> Seats left
                             </button>
                         </div>
                     </div>
@@ -167,7 +167,7 @@
                 </div>
             </div>
             <!--  -->
-            <div class="w-[1180px] mx-auto rounded-3xl bg-white flex items-center mt-12 px-8 py-6 justify-between">
+            <div id="detail-section" class="w-[1180px] mx-auto rounded-3xl bg-white flex items-center mt-12 px-8 py-6 justify-between">
                 <div class="w-[609px]">
                     <div>
                         <h3 class="text-[#030712] text-2xl font-bold mb-5">Select Your Seat</h3>
@@ -197,19 +197,19 @@
                                 </div>
                                 <div class="w-[570px] flex justify-between">
                                     <div class="w-[252px] flex justify-between">
-                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                        <div onclick="selectClick('A1')" id="A1" class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
                                             <p class="text-[#03071280] flex font-medium inter text-lg">A1</p>
                                         </div>
-                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                        <div onclick="selectClick('A2')" id="A2" class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
                                             <p class="text-[#03071280] flex font-medium inter text-lg">A2</p>
                                         </div>
                                     </div>
 
                                     <div class="w-[252px] flex justify-between">
-                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                        <div onclick="selectClick('A3')" id="A3" class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
                                             <p class="text-[#03071280] flex font-medium inter text-lg">A3</p>
                                         </div>
-                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                        <div onclick="selectClick('A4')" id="A4" class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
                                             <p class="text-[#03071280] flex font-medium inter text-lg">A4</p>
                                         </div>
                                     </div>
@@ -222,19 +222,19 @@
                                 </div>
                                 <div class="w-[570px] flex justify-between">
                                     <div class="w-[252px] flex justify-between">
-                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                        <div onclick="selectClick('B1')" id="B1" class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
                                             <p class="text-[#03071280] flex font-medium inter text-lg">B1</p>
                                         </div>
-                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                        <div onclick="selectClick('B2')" id="B2" class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
                                             <p class="text-[#03071280] flex font-medium inter text-lg">B2</p>
                                         </div>
                                     </div>
 
                                     <div class="w-[252px] flex justify-between">
-                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                        <div onclick="selectClick('B3')" id="B3" class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
                                             <p class="text-[#03071280] flex font-medium inter text-lg">B3</p>
                                         </div>
-                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                        <div onclick="selectClick('B4')" id="B4" class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
                                             <p class="text-[#03071280] flex font-medium inter text-lg">B4</p>
                                         </div>
                                     </div>
@@ -247,19 +247,19 @@
                                 </div>
                                 <div class="w-[570px] flex justify-between">
                                     <div class="w-[252px] flex justify-between">
-                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                        <div onclick="selectClick('C1')" id="C1" class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
                                             <p class="text-[#03071280] flex font-medium inter text-lg">C1</p>
                                         </div>
-                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                        <div onclick="selectClick('C2')" id="C2" class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
                                             <p class="text-[#03071280] flex font-medium inter text-lg">C2</p>
                                         </div>
                                     </div>
 
                                     <div class="w-[252px] flex justify-between">
-                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                        <div onclick="selectClick('C3')" id="C3" class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
                                             <p class="text-[#03071280] flex font-medium inter text-lg">C3</p>
                                         </div>
-                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                        <div onclick="selectClick('C4')" id="C4" class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
                                             <p class="text-[#03071280] flex font-medium inter text-lg">C4</p>
                                         </div>
                                     </div>
@@ -272,19 +272,19 @@
                                 </div>
                                 <div class="w-[570px] flex justify-between">
                                     <div class="w-[252px] flex justify-between">
-                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                        <div onclick="selectClick('D1')" id="D1" class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
                                             <p class="text-[#03071280] flex font-medium inter text-lg">D1</p>
                                         </div>
-                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                        <div onclick="selectClick('D2')" id="D2" class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
                                             <p class="text-[#03071280] flex font-medium inter text-lg">D2</p>
                                         </div>
                                     </div>
 
                                     <div class="w-[252px] flex justify-between">
-                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                        <div onclick="selectClick('D3')" id="D3" class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
                                             <p class="text-[#03071280] flex font-medium inter text-lg">D3</p>
                                         </div>
-                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                        <div onclick="selectClick('D4')" id="D4" class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
                                             <p class="text-[#03071280] flex font-medium inter text-lg">D4</p>
                                         </div>
                                     </div>
@@ -297,19 +297,19 @@
                                 </div>
                                 <div class="w-[570px] flex justify-between">
                                     <div class="w-[252px] flex justify-between">
-                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                        <div onclick="selectClick('E1')" id="E1" class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
                                             <p class="text-[#03071280] flex font-medium inter text-lg">E1</p>
                                         </div>
-                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                        <div onclick="selectClick('E2')" id="E2" class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
                                             <p class="text-[#03071280] flex font-medium inter text-lg">E2</p>
                                         </div>
                                     </div>
 
                                     <div class="w-[252px] flex justify-between">
-                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                        <div onclick="selectClick('E3')" id="E3" class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
                                             <p class="text-[#03071280] flex font-medium inter text-lg">E3</p>
                                         </div>
-                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                        <div onclick="selectClick('E4')" id="E4" class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
                                             <p class="text-[#03071280] flex font-medium inter text-lg">E4</p>
                                         </div>
                                     </div>
@@ -322,19 +322,19 @@
                                 </div>
                                 <div class="w-[570px] flex justify-between">
                                     <div class="w-[252px] flex justify-between">
-                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                        <div onclick="selectClick('F1')" id="F1" class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
                                             <p class="text-[#03071280] flex font-medium inter text-lg">F1</p>
                                         </div>
-                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                        <div onclick="selectClick('F2')" id="F2" class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
                                             <p class="text-[#03071280] flex font-medium inter text-lg">F2</p>
                                         </div>
                                     </div>
 
                                     <div class="w-[252px] flex justify-between">
-                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                        <div onclick="selectClick('F3')" id="F3" class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
                                             <p class="text-[#03071280] flex font-medium inter text-lg">F3</p>
                                         </div>
-                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                        <div onclick="selectClick('F4')" id="F4" class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
                                             <p class="text-[#03071280] flex font-medium inter text-lg">F4</p>
                                         </div>
                                     </div>
@@ -347,19 +347,19 @@
                                 </div>
                                 <div class="w-[570px] flex justify-between">
                                     <div class="w-[252px] flex justify-between">
-                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                        <div onclick="selectClick('G1')" id="G1" class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
                                             <p class="text-[#03071280] flex font-medium inter text-lg">G1</p>
                                         </div>
-                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                        <div onclick="selectClick('G2')" id="G2" class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
                                             <p class="text-[#03071280] flex font-medium inter text-lg">G2</p>
                                         </div>
                                     </div>
 
                                     <div class="w-[252px] flex justify-between">
-                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                        <div onclick="selectClick('G3')" id="G3" class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
                                             <p class="text-[#03071280] flex font-medium inter text-lg">G3</p>
                                         </div>
-                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                        <div onclick="selectClick('G4')" id="G4" class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
                                             <p class="text-[#03071280] flex font-medium inter text-lg">G4</p>
                                         </div>
                                     </div>
@@ -372,19 +372,19 @@
                                 </div>
                                 <div class="w-[570px] flex justify-between">
                                     <div class="w-[252px] flex justify-between">
-                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                        <div onclick="selectClick('H1')" id="H1" class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
                                             <p class="text-[#03071280] flex font-medium inter text-lg">H1</p>
                                         </div>
-                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                        <div onclick="selectClick('H2')" id="H2" class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
                                             <p class="text-[#03071280] flex font-medium inter text-lg">H2</p>
                                         </div>
                                     </div>
 
                                     <div class="w-[252px] flex justify-between">
-                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                        <div onclick="selectClick('H3')" id="H3" class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
                                             <p class="text-[#03071280] flex font-medium inter text-lg">H3</p>
                                         </div>
-                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                        <div onclick="selectClick('H4')" id="H4" class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
                                             <p class="text-[#03071280] flex font-medium inter text-lg">H4</p>
                                         </div>
                                     </div>
@@ -397,19 +397,19 @@
                                 </div>
                                 <div class="w-[570px] flex justify-between">
                                     <div class="w-[252px] flex justify-between">
-                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                        <div onclick="selectClick('I1')" id="I1" class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
                                             <p class="text-[#03071280] flex font-medium inter text-lg">I1</p>
                                         </div>
-                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                        <div onclick="selectClick('I2')" id="I2" class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
                                             <p class="text-[#03071280] flex font-medium inter text-lg">I2</p>
                                         </div>
                                     </div>
 
                                     <div class="w-[252px] flex justify-between">
-                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                        <div onclick="selectClick('I3')" id="I3" class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
                                             <p class="text-[#03071280] flex font-medium inter text-lg">I3</p>
                                         </div>
-                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                        <div onclick="selectClick('I4')" id="I4" class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
                                             <p class="text-[#03071280] flex font-medium inter text-lg">I4</p>
                                         </div>
                                     </div>
@@ -422,19 +422,19 @@
                                 </div>
                                 <div class="w-[570px] flex justify-between">
                                     <div class="w-[252px] flex justify-between">
-                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                        <div onclick="selectClick('J1')" id="J1" class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
                                             <p class="text-[#03071280] flex font-medium inter text-lg">J1</p>
                                         </div>
-                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                        <div onclick="selectClick('J2')" id="J2" class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
                                             <p class="text-[#03071280] flex font-medium inter text-lg">J2</p>
                                         </div>
                                     </div>
 
                                     <div class="w-[252px] flex justify-between">
-                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                        <div onclick="selectClick('J3')" id="J3" class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
                                             <p class="text-[#03071280] flex font-medium inter text-lg">J3</p>
                                         </div>
-                                        <div class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
+                                        <div onclick="selectClick('J4')" id="J4" class="h-[56px] w-[110px] bg-[#f7f7f7] flex items-center justify-center rounded-xl cursor-pointer">
                                             <p class="text-[#03071280] flex font-medium inter text-lg">J4</p>
                                         </div>
                                     </div>
@@ -456,7 +456,7 @@
                     <div class="bg-[#f7f7f7] rounded-xl py-6 px-7 mb-4">
                         <div class="flex mb-3">
                             <h5 class="inter font-medium text-[#030712] mr-20 flex items-center">Seat
-                                <span class="badge ml-1 w-7 h-[14px] text-xs flex mb-[2px] pt-[2px] bg-[#1DD100] text-white">0</span>
+                                <span id="current-count" class="badge ml-1 w-7 h-[14px] text-xs flex mb-[2px] pt-[2px] bg-[#1DD100] text-white">0</span>
                             </h5>
                             <h5 class="inter font-medium text-[#030712] mr-[150px]">Class</h5>
                             <h5 class="inter font-medium text-[#030712]">Price</h5>
@@ -563,5 +563,7 @@
             </div>
         </div>
     </footer>
+    <script src="scripts/config.js"></script>
+    <script src="scripts/utility.js"></script>
 </body>
 </html>
