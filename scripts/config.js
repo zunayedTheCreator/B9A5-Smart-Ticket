@@ -179,6 +179,13 @@ function checkCoupon() {
         const grandTotal = totalPrice - amountToRemove;
 
         grandTotalElement.innerText = grandTotal;
+
+        showElementById('discount-div');
+        const discountedPriceElement = document.getElementById('discount-price');
+        
+        discountedPriceElement.innerText = amountToRemove;
+
+        addClasssById('coupon-div', 'hidden');
     }
     else if (codeInput === 'Couple 20') {
         console.log('correct code');
@@ -198,6 +205,13 @@ function checkCoupon() {
         const grandTotal = totalPrice - amountToRemove;
 
         grandTotalElement.innerText = grandTotal;
+
+        showElementById('discount-div');
+        const discountedPriceElement = document.getElementById('discount-price');
+        
+        discountedPriceElement.innerText = amountToRemove;
+
+        addClasssById('coupon-div', 'hidden');
     }
     else if (codeInput === '') {
         hideElementById('coupon-error')
@@ -230,13 +244,13 @@ function checkInput() {
     const phoneInput = document.getElementById('phone-input');
     const phoneInputValue = phoneInput.value;
 
-    if (nameInputValue === '' || phoneInputValue === '') {
+    if (phoneInputValue === '') {
         console.log('Input box is empty!');
 
         const formBtn = document.getElementById('form-btn');
         formBtn.setAttribute("disabled", true);
     }
-    else if (nameInputValue !== '' && phoneInputValue !== '') {
+    else if (phoneInputValue !== '') {
         console.log('Input box has a value: ' + nameInputValue);
         console.log('Input box has a value: ' + phoneInputValue);
 

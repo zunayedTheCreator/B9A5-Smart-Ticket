@@ -501,12 +501,16 @@
                             </div>
                         </div>
                         <div class="border-dashed border mb-3"></div>
-                        <div class="flex justify-between mb-4">
+                        <div class="flex justify-between mb-3">
                             <h4 class="inter font-bold text-[#030712]">Total Price</h4>
                             <h4 class="inter font-bold text-[#030712]">BDT <span id="total-price">0</span></h4>
                         </div>
+                        <div id="discount-div" class="flex justify-between mb-2 hidden">
+                            <h6 class="inter font-semibold text-[#03071280]">Discounted Price</h6>
+                            <h6 class="inter font-semibold text-[#03071280]">BDT <span id="discount-price">0</span></h6>
+                        </div>
                         <div class="mb-5">
-                            <div class="h-[56px] bg-white rounded-xl flex items-center">
+                            <div id="coupon-div" class="h-[56px] bg-white rounded-xl flex items-center">
                                 <input id="apply-input" type="text" class="py-3 ml-1 pr-[108px] pl-2 outline-none focus:outline-none rounded-xl" placeholder="Have any copupon?" disabled>
                                 <button onclick="checkCoupon()" id="apply-btn" class="btn bg-[#1DD100] text-white disabled:bg-slate-300 disabled:text-white" disabled>Apply</button>
                             </div>
@@ -535,7 +539,7 @@
                     <div class="mb-4">
                         <form action="#">
                             <h4 class="inter font-bold text-[#030712] mb-3">Passenger Name*</h4>
-                            <input onblur="checkInput()" id="name-input" type="text" placeholder="Enter your name" class="input input-bordered w-full mb-5" required disabled/>
+                            <input onblur="checkInput()" id="name-input" type="text" placeholder="Enter your name" class="input input-bordered w-full mb-5" disabled/>
 
                             <h4 class="inter font-bold text-[#030712] mb-3">Phone Number*</h4>
                             <input onblur="checkInput()" id="phone-input" type="number" placeholder="Enter your phone number" class="input input-bordered w-full mb-5" required disabled/>
