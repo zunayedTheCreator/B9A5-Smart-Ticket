@@ -243,6 +243,7 @@ function checkInput() {
     const nameInputValue = nameInput.value;
     const phoneInput = document.getElementById('phone-input');
     const phoneInputValue = phoneInput.value;
+    const validPhone = phoneInputValue.length;
 
     if (phoneInputValue === '') {
         console.log('Input box is empty!');
@@ -250,7 +251,10 @@ function checkInput() {
         const formBtn = document.getElementById('form-btn');
         formBtn.setAttribute("disabled", true);
     }
-    else if (phoneInputValue !== '') {
+    else if (validPhone !== 11) {
+        my_modal_5.showModal()
+    }
+    else if (validPhone === 11) {
         console.log('Input box has a value: ' + nameInputValue);
         console.log('Input box has a value: ' + phoneInputValue);
 
