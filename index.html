@@ -22,6 +22,7 @@
         "slnt" 0;
         }
     </style>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body class="raleway p-0 m-0">
     <header class="pt-4">
@@ -57,7 +58,7 @@
         </div>
     </header>
     <main>
-        <p id="selectedId" class="hidden"></p>
+        <p id="selectedId1" data-original-text="Original text" class="hidden"></p>
         <!--^ But Ticket section -->
         <section class="w-[1171px] mx-auto mt-6">
             <img class="left-0 right-0 mx-auto top-28 absolute z-[-1]" src="images/banner.png" alt="">
@@ -478,23 +479,23 @@
                         </div>
                         <div class="border-dashed border mb-3"></div>
                         <div>
-                            <div class="flex mb-3">
-                                <h5 class="inter text-[#03071299] mr-[130px] flex items-center">A1</h5>
+                            <div id="seat-1" class="flex mb-3 hidden">
+                                <h5 id="seat-id-1" class="inter text-[#03071299] mr-[130px] flex items-center">A1</h5>
                                 <h5 class="inter text-[#03071299] mr-[120px]">Economoy</h5>
                                 <h5 class="inter text-[#03071299]">550</h5>
                             </div>
-                            <div class="flex mb-3">
-                                <h5 class="inter text-[#03071299] mr-[130px] flex items-center">B1</h5>
+                            <div id="seat-2" class="flex mb-3 hidden">
+                                <h5 id="seat-id-2" class="inter text-[#03071299] mr-[130px] flex items-center">B1</h5>
                                 <h5 class="inter text-[#03071299] mr-[120px]">Economoy</h5>
                                 <h5 class="inter text-[#03071299]">550</h5>
                             </div>
-                            <div class="flex mb-3">
-                                <h5 class="inter text-[#03071299] mr-[130px] flex items-center">B1</h5>
+                            <div id="seat-3" class="flex mb-3 hidden">
+                                <h5 id="seat-id-3" class="inter text-[#03071299] mr-[130px] flex items-center">B1</h5>
                                 <h5 class="inter text-[#03071299] mr-[120px]">Economoy</h5>
                                 <h5 class="inter text-[#03071299]">550</h5>
                             </div>
-                            <div class="flex mb-3">
-                                <h5 class="inter text-[#03071299] mr-[130px] flex items-center">D1</h5>
+                            <div id="seat-4" class="flex mb-3 hidden">
+                                <h5 id="seat-id-4" class="inter text-[#03071299] mr-[130px] flex items-center">D1</h5>
                                 <h5 class="inter text-[#03071299] mr-[120px]">Economoy</h5>
                                 <h5 class="inter text-[#03071299]">550</h5>
                             </div>
@@ -502,34 +503,61 @@
                         <div class="border-dashed border mb-3"></div>
                         <div class="flex justify-between mb-4">
                             <h4 class="inter font-bold text-[#030712]">Total Price</h4>
-                            <h4 class="inter font-bold text-[#030712]">BDT 1100</h4>
+                            <h4 class="inter font-bold text-[#030712]">BDT <span id="total-price">0</span></h4>
                         </div>
                         <div class="mb-5">
                             <div class="h-[56px] bg-white rounded-xl flex items-center">
-                                <input type="text" class="py-3 ml-1 pr-[108px] pl-2 outline-none focus:outline-none rounded-xl" placeholder="Have any copupon?" disabled>
-                                <button id="apply-btn" class="btn bg-[#1DD100] text-white disabled:bg-slate-300 disabled:text-white" disabled>Apply</button>
+                                <input id="apply-input" type="text" class="py-3 ml-1 pr-[108px] pl-2 outline-none focus:outline-none rounded-xl" placeholder="Have any copupon?" disabled>
+                                <button onclick="checkCoupon()" id="apply-btn" class="btn bg-[#1DD100] text-white disabled:bg-slate-300 disabled:text-white" disabled>Apply</button>
+                            </div>
+
+                            <div id="coupon-error" role="alert" class="alert alert-error h-6 flex items-center justify-center mt-3 hidden">
+                                <i class='bx bx-x-circle'></i>
+                                <span class="text-sm">The Coupon Code is Invalid</span>
+                            </div>
+
+                            <div id="coupon-success" role="alert" class="alert alert-success h-6 flex items-center justify-center mt-3 hidden">
+                                <i class='bx bx-check-circle'></i>
+                                <span class="text-sm">The Coupon Code is Used</span>
+                            </div>
+
+                            <div id="coupon-warning" role="alert" class="alert alert-warning h-6 flex items-center justify-center mt-3 hidden">
+                                <i class='bx bx-error-circle'></i>
+                                <span class="text-sm">The Coupon Code is Already Used</span>
                             </div>
                         </div>
                         <div class="flex justify-between mb-4">
                             <h4 class="inter font-bold text-[#030712]">Grand Total</h4>
-                            <h4 class="inter font-bold text-[#030712]">BDT 1100</h4>
+                            <h4 class="inter font-bold text-[#030712]">BDT <span id="grand-total">0</span></h4>
                         </div>
                     </div>
 
                     <div class="mb-4">
                         <form action="#">
                             <h4 class="inter font-bold text-[#030712] mb-3">Passenger Name*</h4>
-                            <input type="text" placeholder="Enter your name" class="input input-bordered w-full mb-5" required/>
+                            <input onblur="checkInput()" id="name-input" type="text" placeholder="Enter your name" class="input input-bordered w-full mb-5" required disabled/>
 
                             <h4 class="inter font-bold text-[#030712] mb-3">Phone Number*</h4>
-                            <input type="number" placeholder="Enter your phone number" class="input input-bordered w-full mb-5" required/>
+                            <input onblur="checkInput()" id="phone-input" type="number" placeholder="Enter your phone number" class="input input-bordered w-full mb-5" required disabled/>
 
                             <h4 class="inter font-bold text-[#030712] mb-3">Email ID</h4>
-                            <input type="email" name="email" placeholder="Enter your email Id" class="input input-bordered w-full mb-6"/>
+                            <input id="email-input" type="email" name="email" placeholder="Enter your email Id" class="input input-bordered w-full mb-6" disabled/>
 
-                            <input type="button" name="button" value="Next" class="btn py-2 w-full rounded-2xl bg-[#1DD100] text-white font-bold">
+                            <input id="form-btn" type="button" name="button" value="Next" class="btn py-2 w-full rounded-2xl bg-[#1DD100] text-white font-bold" disabled onclick="my_modal_2.showModal(), clearInput()">
                         </form>
                     </div>
+                    <dialog id="my_modal_2" class="modal">
+                        <div class="modal-box w-5/12 max-w-5xl text-center">
+                            <img src="images/success.png" alt="" class="mx-auto mb-5 mt-2">
+                            <h2 class="text-[#27AE60] font-bold mb-6 text-2xl">SUCCESS</h2>
+                            <h3 class="font-bold text-lg">Thank you for Booking Our Bus Seats.</h3>
+                            <h3 class="font-bold text-lg mb-3">We are working hard to find the best service and deals for you.</h3>
+                            <p class="mb-4 inter font-medium">Shortly you will find a confirmation in your email.</p>
+                            <div class="modal-action">
+                                <button onclick="refreshPage()" class="btn px-20 rounded-full bg-[#27AE60] text-white font-semibold mx-auto">Close</button>
+                            </div>
+                        </div>
+                    </dialog>
                     <div class="flex justify-around">
                         <p class="font-medium text-[#03071299] underline">Terms and Conditions</p>
                         <p class="font-medium text-[#03071299] underline">Cancellation Policy</p>
